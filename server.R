@@ -90,7 +90,12 @@ server <- function(input, output, session){
     observeEvent(input$MAPDATA, {
 
         map_selection <- str_match(input$MAPDATA, '(.+?)__(.+?)_goto.*$')[,2:3]
+        
+        # WS debugging printers
+        print(paste('domain: ', map_selection[1]))
+        print(paste('site: ', map_selection[2]))
 
+        
         domain_sel <- map_selection[1]
         site_sel <- map_selection[2]
 

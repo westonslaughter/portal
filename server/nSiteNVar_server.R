@@ -159,7 +159,7 @@ get_domains3 <- eventReactive(eventExpr = input$DOMAINS3,
 
 #when site(s) change or basedata reactive value updates, basedata changes
 load_basedata <- eventReactive({
-
+  
     input$DOMAINS3
     input$SITES3
     # reactive_vals$update_basedata
@@ -172,7 +172,7 @@ load_basedata <- eventReactive({
 
 }, {
 
-    # #NOTICE: may not behave as expected (might have to globally define the datasets below)
+    # # NOTICE: may not behave as expected (might have to globally define the datasets below)
     # time_scheme <<- input$TIME_SCHEME3
     # agg <<- isolate(input$AGG3)
     # dmns <<- get_domains3()
@@ -229,7 +229,7 @@ load_basedata <- eventReactive({
                                    get_local_solar_time,
                                    .y = time_scheme)
     }
-
+    print('HERES JOHNNY')
     return(basedata)
 })
 
